@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание экзаменов</title>
+    <link rel="icon" type="image/png" href="images/schedule.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div><img src="images/schedule.png" alt=""/></div>
+            <div><h1>Расписание экзаменов</h1></div>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" id="home-link">Главная</a></li>
+                <li>
+                    <a href="#" id="lists-link">Списки</a>
+                    <ul class="submenu">
+                        <li><a href="#" id="subjects-link">Дисциплины</a></li>
+                        <li><a href="#" id="dates-link">Даты</a></li>
+                        <li><a href="#" id="groups-link">Группы</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="schedule-link">Расписание</a></li>
+            </ul>
+        </nav>
+        <main class="content" id="main-content">
+            <h2>Система назначения экзаменов</h2>
+            <form id="decision-form">
+                <label for="subject">Название дисциплины:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="group">Группа:</label>
+                <input type="text" id="group" name="group" required>
+                
+                <label for="exam-date">Дата экзамена:</label>
+                <input type="date" id="exam-date" name="exam-date" required>
+                
+                <label for="exam-time">Время экзамена:</label>
+                <input type="time" id="exam-time" name="exam-time" required>
+
+                <button class="btn-new" type="button" id="submit-button">Назначить экзамен</button>
+                <button class="btn-new" type="button" id="clear-button">Очистить</button>
+            </form>
+            <div id="result"></div>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 Система назначения экзаменов</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./dist/bundle.js" ></script>   
+</body>
+</html>
+
+
