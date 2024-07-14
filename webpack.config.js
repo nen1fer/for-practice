@@ -9,6 +9,11 @@ module.exports = {
         filename: 'bundle.js', // имя выходного файла
         publicPath: '/dist/' // публичный путь для загрузки ресурсов
     },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
+    },
     module: {
         rules: [
             {
