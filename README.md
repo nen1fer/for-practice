@@ -19,9 +19,9 @@
 
 Для сборки и запуска проекта выполните:
 
-    ```sh
+    
     git clone https://github.com/nen1fer/for-practice.git
     cd for-practice
     npm install
     npm start
-    ```
+    
