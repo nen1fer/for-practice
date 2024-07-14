@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',async () => {
             return;
         }
         
-        const groupRegex = /^\d{2}[а-яА-Я]{1,2}\d$/;
+        const groupRegex = /^\d{2}[а-яА-Я]{1,3}\d$/;
         if (!groupRegex.test(group)) {
             resultDiv.textContent = 'Группа введенна некорректно(пример корректного ввода "21ВИ1", "22ВВП2").';
             return;
