@@ -45,7 +45,9 @@ module.exports = {
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser'
     }),
-    new Dotenv()
+    new webpack.DefinePlugin({
+      'process.env.MY_TOKEN': JSON.stringify(process.env.MY_TOKEN)
+    })
   ]
 };
 
