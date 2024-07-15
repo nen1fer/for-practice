@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
+const MY_TOKEN = process.env.MY_TOKEN;
 
 
 module.exports = {
@@ -42,7 +44,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser'
-    })
+    }),
+    new Dotenv()
   ]
 };
 
