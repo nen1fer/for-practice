@@ -22,7 +22,8 @@
     
     git clone https://github.com/nen1fer/for-practice.git
     cd for-practice
-    npm build
+    echo "MY_TOKEN=github_000pat_00011BJPFPIQ0ORBzQSOCAxpN_J5UTvSbRdm8wo9XeZqjVsGoQlGwPMPRgpOVRlE9O8OAG5NYBW7Xbv65izL8" > .env
     npm install
+    npm run build
     npm start
     
