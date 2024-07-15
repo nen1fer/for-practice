@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',async () => {
         const examTime = form['exam-time'].value;
         const selectedDateTime = new Date(`${examDate}T${examTime}`);
 
-        const subjectRegex = /[а-яА-ЯЁё]/;
+        const subjectRegex = /[а-яА-ЯЁё ]/;
         if (!subjectRegex.test(subject)) {
             resultDiv.textContent = 'Название дисциплины должно быть на русском языке.';
             return;

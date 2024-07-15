@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
 
 
 module.exports = {
@@ -29,7 +28,15 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            }
+            },
+            {
+                test: /\.css$/, // добавьте это правило, если у вас есть CSS файлы
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|jpg|gif)$/i, // добавьте это правило для обработки изображений
+                type: 'asset/resource',
+            },
         ]
     },
     resolve: {
@@ -43,12 +50,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser'
-    }),
-    new Dotenv(),
-    new webpack.DefinePlugin({
-            'process.env.MY_TOKEN': JSON.stringify(process.env.MY_TOKEN)
-        })
-    ]
+    })
   ]
 };
 

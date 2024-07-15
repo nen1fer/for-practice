@@ -1,11 +1,9 @@
-require('dotenv').config();
-const axios = require('axios');
 const GITHUB_API_URL = 'https://api.github.com';
 const REPO_OWNER = 'nen1fer';
 const REPO_NAME = 'for-practice';
 const FILE_PATH = 'schedule.json';
 const BRANCH = 'main';
-const TOKEN = process.env.MY_TOKEN;
+const TOKEN = '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'; //знаю, что токен надо скрывать, но в данном случае не знаю как это реализовать
 
  export async function getShaOfFile() {
     try {
