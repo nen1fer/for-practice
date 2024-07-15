@@ -22,6 +22,7 @@
     
     git clone https://github.com/nen1fer/for-practice.git
     cd for-practice
+    npm build
     npm install
     npm start
     
