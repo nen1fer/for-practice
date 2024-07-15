@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const MY_TOKEN = process.env.MY_TOKEN;
+const Dotenv = require('dotenv-webpack');
 
 
 module.exports = {
@@ -44,9 +44,11 @@ module.exports = {
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser'
     }),
+    new Dotenv(),
     new webpack.DefinePlugin({
-      'process.env.MY_TOKEN': JSON.stringify(process.env.MY_TOKEN)
-    })
+            'process.env.MY_TOKEN': JSON.stringify(process.env.MY_TOKEN)
+        })
+    ]
   ]
 };
 
