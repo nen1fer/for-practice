@@ -1,0 +1,25 @@
+name: Use Secret Token
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+
+jobs:
+  use-secret-token:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up secret token
+        run: echo "MY_TOKEN=${{ secrets.MY_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Build with webpack
+        run: |
+          npm install
+          npm run build
+        env:
+          MY_TOKEN: ${{ secrets.MY_TOKEN }}
