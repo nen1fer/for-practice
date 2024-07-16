@@ -3,11 +3,11 @@ const webpack = require('webpack');
 
 
 module.exports = {
-    entry: './src/index.js', // точка входа вашего приложения
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'), // путь к выходной директории
-        filename: 'bundle.js', // имя выходного файла
-        publicPath: '/dist/' // публичный путь для загрузки ресурсов
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        publicPath: '/dist/' 
     },
     devServer: {
         static: {
@@ -30,11 +30,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/, // добавьте это правило, если у вас есть CSS файлы
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|jpg|gif)$/i, // добавьте это правило для обработки изображений
+                test: /\.(png|jpg|gif)$/i,
                 type: 'asset/resource',
             },
         ]
