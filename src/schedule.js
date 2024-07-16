@@ -3,7 +3,7 @@ const REPO_OWNER = 'nen1fer';
 const REPO_NAME = 'for-practice';
 const FILE_PATH = 'schedule.json';
 const BRANCH = 'main';
-const TOKEN = ''; //знаю, что токен надо скрывать, но в данном случае не знаю как это реализовать
+const TOKEN = ''; 
 
  export async function getShaOfFile() {
     try {
