@@ -22,9 +22,11 @@
     
     git clone https://github.com/nen1fer/for-practice.git
     cd for-practice
+    .\insert.ps1
     npm install
+    npm run build
     npm start
 ## Комментарий
 
-Пыталась по-человечески спрятать токен, но у меня не получилось, поэтому он в коде и репозиторий приватный(((  
-Д и с гитом я до этого не работала, не обессудьте silly student :disappointed_relieved:
+Пыталась по-человечески спрятать токен через переменные окружения, но у меня не получилось, выкрутилась немного по-другому  
+Не обессудьте :disappointed_relieved:
