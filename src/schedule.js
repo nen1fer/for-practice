@@ -1,3 +1,4 @@
+const axios = require('axios');
 const GITHUB_API_URL = 'https://api.github.com';
 const REPO_OWNER = 'nen1fer';
 const REPO_NAME = 'for-practice';
